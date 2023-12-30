@@ -175,6 +175,11 @@ span{
 
 }
 
+.default:hover .second-section-paragraph,
+.default:focus .second-section-paragraph{
+    transform: translateY(0%);
+}
+
 .third-section-head{
     font-size: 36px;
     line-height: 1.11;
@@ -289,6 +294,8 @@ span{
     padding: 12px 24px;
     border: 1px solid #e7e9fc;
     border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
 }
 
@@ -303,6 +310,7 @@ span{
 .default{
     text-decoration: none;
     display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .default:hover , .default:focus{
@@ -468,6 +476,26 @@ span{
     margin-bottom: 8px;
 }
 
+.images-card{
+    position: relative;
+    overflow: hidden;   
+}
+
+.paragraph-card{
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--fillers);
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* icon css */
 
 .icon-container{
@@ -533,7 +561,7 @@ span{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    width: 40px;
+    width: 408px;
     min-height: 584px;
     background: #fcfcfc;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
